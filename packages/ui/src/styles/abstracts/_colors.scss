@@ -1,0 +1,59 @@
+$colors: (
+  primary: (
+    100: hsl(183, 100%, 90%),
+    200: hsl(183, 100%, 70%),
+    300: hsl(183, 100%, 50%),
+    400: hsl(183, 100%, 30%),
+    500: hsl(183, 100%, 10%),
+  ),
+  secondary: (
+    100: hsl(200, 15%, 90%),
+    200: hsl(200, 15%, 70%),
+    300: hsl(200, 15%, 50%),
+    400: hsl(200, 15%, 30%),
+    500: hsl(200, 15%, 10%),
+  ),
+  accent: (
+    100: hsl(53, 100%, 90%),
+    200: hsl(53, 100%, 70%),
+    300: hsl(53, 100%, 50%),
+    400: hsl(53, 100%, 30%),
+    500: hsl(53, 100%, 10%),
+  ),
+);
+
+$white: #fff;
+$grey: #d3d3d3;
+$smoke-white: #fcfcfc;
+$grey-white: #f2f2f2;
+
+$gunmetal: #2a3439;
+$electric-blue: #7df9ff;
+$vivid-yellow: #ffe302;
+$magnolia: #f8f4ff;
+
+$dark-gunmetal: #1f262a;
+$light-gunmetal: #2e383c;
+
+$fade-grey: #ededed;
+$light-grey: #e2e2e2;
+$title-grey: #87898a;
+$blue-grey: #223d50;
+$light-blue-grey: #98a9c3;
+$medium-grey: #66676b;
+$basaltic-grey: #878787;
+$purple: #7f00ff;
+$mint: #11ffbd;
+$bloody: #fc354c;
+$pinky: #ff00cc;
+$frost: #004e92;
+$placeholder: #cecece;
+$dark-grey: #344258;
+$border-grey: #ccc;
+$muted-grey: #888;
+$section-grey: #fbfbfb;
+$red: #f00;
+
+$primary: $electric-blue;
+$secondary: $gunmetal;
+$accent: $vivid-yellow;
