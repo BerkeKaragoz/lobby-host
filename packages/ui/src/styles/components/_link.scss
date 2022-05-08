@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+@mixin ui-link {
+   color: color(primary);
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: underline;
+   }
+
+   &:active {
+      color: color(accent);
+   }
+}
+.ui-link {
+   @include ui-link();
+}
+
+.ui-link-button {
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: underline;
+   }
+}

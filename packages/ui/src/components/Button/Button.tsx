@@ -1,31 +1,18 @@
-import clsx from "clsx";
-import * as React from "react";
+import * as React from "react"
+import clsx from "clsx"
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  size?: "small" | "medium" | "large";
-  variant?: "contained" | "outlined" | "text";
-  onClick?: () => void;
-};
+   size?: "small" | "medium" | "large"
+   variant?: "contained" | "outlined" | "text"
+   onClick?: () => void
+}
 
 const Button: React.FC<Props> = (props) => {
-  const { size = "medium", variant = "contained", className, ...rest } = props;
+   const { size = "medium", variant = "contained", className, ...rest } = props
+   const classes = clsx([`ui-button--${variant}`, className])
 
-  return (
-    <button
-      onClick={() => {}}
-      className={clsx([
-        "ui-button",
-        {
-          _contained: variant === "contained",
-          _outlined: variant === "outlined",
-          _text: variant === "text",
-        },
-        className,
-      ])}
-      {...rest}
-    />
-  );
-};
+   return <button className={classes} {...rest} />
+}
 
-export type { Props as ButtonProps };
-export default Button;
+export type { Props as ButtonProps }
+export default Button

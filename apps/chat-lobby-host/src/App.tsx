@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "ui";
+import { Button, Link } from "ui";
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -17,14 +17,14 @@ function App() {
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
         <p>
-          <a
+          <Link
             className="App-link"
-            href="https://reactjs.org"
+            to="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
+          </Link>
           {" | "}
           <a
             className="App-link"
@@ -38,6 +38,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
