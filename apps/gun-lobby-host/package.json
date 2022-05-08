@@ -3,17 +3,20 @@
    "private": true,
    "version": "0.0.0",
    "scripts": {
-      "dev": "nodemon server --watch",
+      "dev": "vite --port 3002",
+      "dev:server": "nodemon server --watch",
       "build": "tsc && vite build",
       "build:client": "vite build --outDir dist/client --ssrManifest",
       "preview": "vite preview"
    },
    "dependencies": {
+      "formik": "^2.2.9",
       "gun": "^0.2020.1237",
       "react": "^18.0.0",
       "react-dom": "^18.0.0",
       "react-router-dom": "^6.3.0",
-      "ui": "workspace:*"
+      "ui": "workspace:*",
+      "yup": "^0.32.11"
    },
    "devDependencies": {
       "@types/react": "^18.0.0",

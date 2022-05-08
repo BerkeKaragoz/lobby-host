@@ -4,7 +4,6 @@ import clsx from "clsx"
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
    size?: "small" | "medium" | "large"
    variant?: "contained" | "outlined" | "text"
-   onClick?: () => void
 }
 
 const Button: React.FC<Props> = (props) => {

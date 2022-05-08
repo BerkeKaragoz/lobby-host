@@ -1,0 +1,60 @@
+@use "../abstracts" as *;
+
+@mixin ui-input {
+   border-radius: 0.25rem;
+   border-style: solid;
+   border-width: 0.1rem;
+   outline-style: none;
+   padding: 0.25rem 0.75rem;
+
+   font-weight: 500;
+
+   color: color(gray, 500);
+}
+
+.ui-input {
+   @include ui-input();
+
+   &--contained {
+      @extend .ui-input;
+      background-color: color(gray, 0);
+
+      &:hover {
+         border-color: color(gray, 100);
+      }
+
+      &:focus-within {
+         border-color: color(primary);
+      }
+   }
+
+   &--outlined {
+      @extend .ui-input;
+      background-color: $noOpacityColor;
+      border-color: color(gray, 200);
+      color: color(gray, 100);
+
+      &:hover {
+         border-color: color(gray, 100);
+      }
+
+      &:focus-within {
+         border-color: color(primary);
+      }
+   }
+
+   &--text {
+      @extend .ui-input;
+      background-color: $noOpacityColor;
+      border-color: $noc $noc color(gray, 200) $noc;
+      color: color(gray, 100);
+
+      &:hover {
+         border-color: $noc $noc color(gray, 100) $noc;
+      }
+
+      &:focus-within {
+         border-color: $noc $noc color(primary) $noc;
+      }
+   }
+}

@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+@mixin ui-checkbox {
+}
+
+.ui-checkbox {
+   @include ui-checkbox();
+
+   &::before {
+      content: "-";
+   }
+
+   &--contained {
+      @extend .ui-checkbox;
+      color: red;
+   }
+
+   & > span {
+      &::before {
+         content: "X";
+      }
+   }
+}
