@@ -11,3 +11,11 @@
 
   @return var(colorName($name, $shade));
 }
+
+@function colorValue($name, $shade: 300) {
+  @if not map-get($colors, $name + "", $shade) {
+    @error "Color `#{$name}-#{$name}` is not found!";
+  }
+
+  @return var(--ui-#{unquote($name)-$shade}-value);
+}

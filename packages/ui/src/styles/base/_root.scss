@@ -3,7 +3,9 @@
 :root {
   @each $color, $shade in $colors {
     @each $prop, $value in $shade {
-      #{colorName($color, $prop)}: #{$value};
+      $colorValueName: #{colorName($color, $prop)}-value;
+      #{$colorValueName}: #{$value};
+      #{colorName($color, $prop)}: unquote("hsl(#{var($colorValueName)})");
     }
   }
 }
