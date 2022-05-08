@@ -1,21 +1,21 @@
 @use "colors" as *;
 
 @function colorName($name, $shade) {
-  @return --ui-#{unquote($name)-$shade};
+  @return --ui-#{unquote(#{$name})-$shade};
 }
 
 @function color($name, $shade: 300) {
-  @if not map-get($colors, $name + "", $shade) {
-    @error "Color `#{$name}-#{$name}` is not found!";
+  @if not map-get($colors, $name, $shade) {
+    @error "Color `#{$name}-#{$shade}` is not found on $colors!";
   }
 
   @return var(colorName($name, $shade));
 }
 
 @function colorValue($name, $shade: 300) {
-  @if not map-get($colors, $name + "", $shade) {
-    @error "Color `#{$name}-#{$name}` is not found!";
+  @if not map-get($colors, $name, $shade) {
+    @error "Color `#{$name}-#{$shade}` is not found $colors!";
   }
 
-  @return var(--ui-#{unquote($name)-$shade}-value);
+  @return var(--ui-#{unquote(#{$name})-$shade}-value);
 }

@@ -2,29 +2,13 @@ import clsx from "clsx";
 import * as React from "react";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * How large should the button be?
-   */
   size?: "small" | "medium" | "large";
-  variant?: "text" | "contained" | "outlined";
-  /**
-   * Optional click handler
-   */
+  variant?: "contained" | "outlined" | "text";
   onClick?: () => void;
 };
 
 const Button: React.FC<Props> = (props) => {
-  const {
-    primary = true,
-    size = "medium",
-    variant = "contained",
-    className,
-    ...rest
-  } = props;
+  const { size = "medium", variant = "contained", className, ...rest } = props;
 
   return (
     <button
@@ -32,9 +16,9 @@ const Button: React.FC<Props> = (props) => {
       className={clsx([
         "ui-button",
         {
-          _text: variant === "text",
           _contained: variant === "contained",
           _outlined: variant === "outlined",
+          _text: variant === "text",
         },
         className,
       ])}
