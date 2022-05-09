@@ -36,7 +36,7 @@
    &--outlined {
       @extend .ui-button;
       border-color: color(gray, 200);
-      background-color: rgba(black, 0);
+      background-color: $noc;
 
       &:hover {
          background-color: hsla(colorValue(gray, 600), 15%);
@@ -51,8 +51,8 @@
 
    &--text {
       @extend .ui-button;
-      background-color: rgba(black, 0);
-      border-color: rgba(black, 0);
+      background-color: $noc;
+      border-color: $noc;
 
       &:hover {
          background-color: hsla(colorValue(gray, 600), 15%);

@@ -1,23 +1,94 @@
 @use "../abstracts" as *;
 
 @mixin ui-checkbox {
+   all: unset;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 25px;
+   height: 25px;
+
+   border-radius: 0.25rem;
+   border-style: solid;
+   border-width: 2px;
+   border-color: color(gray, 200);
+
+   color: color(gray, 500);
+
+   & > span {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+   }
+
+   &[aria-checked="false"]::before {
+      content: "-";
+      font-size: 2rem;
+      line-height: 0px;
+   }
 }
 
 .ui-checkbox {
    @include ui-checkbox();
 
-   &::before {
-      content: "-";
-   }
-
    &--contained {
       @extend .ui-checkbox;
-      color: red;
+
+      background-color: color(gray, 0);
+
+      &:hover {
+         border-color: color(gray, 100);
+         background-color: color(gray, 100);
+      }
+
+      &:active {
+         background-color: color(gray, 100);
+         border-color: color(primary, 100);
+      }
+
+      &[aria-checked="false"]::before {
+         opacity: 0.25;
+      }
    }
 
-   & > span {
-      &::before {
-         content: "X";
+   &--outlined {
+      @extend .ui-checkbox;
+
+      color: color(gray, 0);
+      border-color: color(gray, 200);
+      background-color: $noc;
+
+      &:hover {
+         background-color: hsla(colorValue(gray, 600), 15%);
+         border-color: color(gray, 100);
+      }
+
+      &:active {
+         background-color: hsla(colorValue(gray), 15%);
+         color: color(primary, 200);
+      }
+
+      &[aria-checked="false"]::before {
+         opacity: 0.25;
+      }
+   }
+
+   &--text {
+      @extend .ui-checkbox;
+
+      color: color(gray, 0);
+      border-color: $noc;
+      background-color: $noc;
+
+      &:hover {
+         background-color: hsla(colorValue(gray, 600), 15%);
+      }
+
+      &:active {
+         background-color: hsla(colorValue(gray), 15%);
+         color: color(primary, 200);
       }
    }
 }

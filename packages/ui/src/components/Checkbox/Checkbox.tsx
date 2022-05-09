@@ -1,5 +1,6 @@
 import * as R from "@radix-ui/react-checkbox"
 import * as React from "react"
+import { CheckIcon } from "@radix-ui/react-icons"
 import clsx from "clsx"
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -13,7 +14,9 @@ const Checkbox: React.FC<Props> = (props) => {
 
    return (
       <R.Root className={classes}>
-         <R.Indicator />
+         <R.Indicator>
+            <CheckIcon width="25px" height="25px" />
+         </R.Indicator>
       </R.Root>
    )
 }
