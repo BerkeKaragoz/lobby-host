@@ -7,15 +7,19 @@
    align-items: center;
    justify-content: center;
 
-   width: 25px;
-   height: 25px;
-
    border-radius: 0.25rem;
    border-style: solid;
    border-width: 2px;
    border-color: color(gray, 200);
 
+   width: 1.6rem;
+   height: 1.6rem;
+
    color: color(gray, 500);
+
+   &:active {
+      cursor: pointer;
+   }
 
    & > span {
       display: flex;
@@ -27,6 +31,23 @@
       content: "-";
       font-size: 2rem;
       line-height: 0px;
+   }
+
+   &.scale-small {
+      width: 1.2rem;
+      height: 1.2rem;
+
+      &[aria-checked="false"]::before {
+         font-size: 1.5rem;
+      }
+   }
+
+   &.scale-large {
+      font-weight: 500;
+      font-size: 1.25rem;
+
+      width: 2.1rem;
+      height: 2.1rem;
    }
 }
 

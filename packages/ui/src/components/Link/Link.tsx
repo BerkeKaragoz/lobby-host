@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import * as React from "react"
-import { ButtonProps } from "../Button"
+import { ButtonProps } from "@/components/Button"
 import clsx from "clsx"
 
 type Props = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
@@ -8,6 +8,7 @@ type Props = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
    isNewTab?: boolean
    isButton?: boolean
    buttonVariant?: ButtonProps["variant"]
+   scale?: "small" | "medium" | "large"
 }
 
 const Link: React.FC<Props> = (props) => {
@@ -16,6 +17,7 @@ const Link: React.FC<Props> = (props) => {
       isNewTab = false,
       isButton = false,
       buttonVariant = "outlined",
+      scale = "medium",
       className,
       ...rest
    } = props
@@ -23,6 +25,7 @@ const Link: React.FC<Props> = (props) => {
       { "ui-link": !isButton },
       { "ui-link-button": isButton },
       { [`ui-button--${buttonVariant}`]: isButton },
+      `scale-${scale}`,
       className,
    ])
 

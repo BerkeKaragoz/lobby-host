@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, Link } from "ui"
+import { Button, Input, Link } from "ui"
 
 const App = () => {
    const [count, setCount] = useState(0)
@@ -9,7 +9,7 @@ const App = () => {
          <header className="App-header">
             <p>Hello Vite + React!</p>
             <p>
-               <Button type="button" onClick={() => setCount((count) => count + 1)}>
+               <Button onClick={() => setCount((count) => count + 1)}>
                   count is: {count}
                </Button>
             </p>
@@ -37,8 +37,8 @@ const App = () => {
             </p>
          </header>
          <form action="" id="said">
-            <input type="text" id="say" />
-            <input type="text" id="speak" />
+            <Input type="text" id="say" />
+            <Input type="text" id="speak" />
          </form>
       </div>
    )

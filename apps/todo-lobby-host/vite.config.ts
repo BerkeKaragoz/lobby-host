@@ -16,6 +16,9 @@ const moduleExclude = (match) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+   resolve: {
+      alias: [{ find: /^@\/(*)/, replacement: "src/$1" }],
+   },
    optimizeDeps: {
       include: [
          "gun",

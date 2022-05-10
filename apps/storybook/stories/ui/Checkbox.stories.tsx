@@ -14,6 +14,4 @@ export default {
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = {
-   placeholder: "Primary",
-}
+Primary.args = {}

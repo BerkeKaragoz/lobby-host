@@ -9,7 +9,8 @@ import "gun/lib/rindexed"
 import "gun/lib/webrtc"
 import "gun/nts"
 
-const createGun = (() => {
+/** And start shooting! */
+const getGun = (() => {
    const gun = Gun({
       peers: [
          "http://localhost:8765/gun",
@@ -21,4 +22,4 @@ const createGun = (() => {
    return () => gun
 })()
 
-export default createGun()
+export default getGun()

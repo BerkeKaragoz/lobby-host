@@ -8,6 +8,7 @@ export default {
    component: Input,
    argTypes: {
       onChange: () => {},
+      size: { type: "number" },
    },
 } as ComponentMeta<typeof Input>
 
@@ -16,4 +17,7 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
    placeholder: "Primary",
+   type: "text",
+   scale: undefined,
+   size: undefined,
 }
