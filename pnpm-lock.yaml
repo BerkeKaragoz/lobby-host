@@ -126,9 +126,8 @@ importers:
       eslint: ^8.15.0
       formik: ^2.2.9
       gun: ^0.2020.1237
-      nodemon: ^2.0.16
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      react: ^18.1.0
+      react-dom: ^18.1.0
       react-router-dom: ^6.3.0
       tsconfig: workspace:*
       typescript: ^4.6.3
@@ -148,7 +147,6 @@ importers:
       '@types/react-dom': 18.0.3
       '@vitejs/plugin-react': 1.3.2
       eslint: 8.15.0
-      nodemon: 2.0.16
       tsconfig: link:../../packages/tsconfig
       typescript: 4.6.4
       vite: 2.9.8

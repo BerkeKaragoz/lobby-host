@@ -1,0 +1,12 @@
+.home__registration {
+}
+
+.home__registration-input {
+   display: flex;
+}
+
+.home__registration-input > div {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}

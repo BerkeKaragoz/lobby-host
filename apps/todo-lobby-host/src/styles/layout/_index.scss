@@ -1,0 +1,33 @@
+:root {
+   --header-height: 96px;
+   --prose-width: 65ch;
+}
+
+#root:first-of-type {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   margin: 0;
+}
+
+.main-wrapper {
+   display: flex;
+   justify-content: stretch;
+   flex-grow: 1;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   position: fixed;
+   width: 100%;
+   height: var(--header-height);
+}
+
+header + div {
+   height: var(--header-height);
+}
+
+main {
+   flex-grow: 1;
+}

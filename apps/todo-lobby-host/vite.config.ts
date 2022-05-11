@@ -1,5 +1,6 @@
-import { defineConfig } from "vite"
+import { defineConfig, resolveConfig } from "vite"
 import react from "@vitejs/plugin-react"
+import { resolve } from "path"
 
 const moduleExclude = (match) => {
    const m = (id) => id.indexOf(match) > -1
@@ -17,7 +18,9 @@ const moduleExclude = (match) => {
 // https://vitejs.dev/config/
 export default defineConfig({
    resolve: {
-      alias: [{ find: /^@\/(*)/, replacement: "src/$1" }],
+      alias: {
+         "@": resolve(__dirname, "src/"),
+      },
    },
    optimizeDeps: {
       include: [
